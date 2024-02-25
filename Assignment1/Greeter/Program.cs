@@ -9,7 +9,7 @@ Console.WriteLine($"Hello,{cFullName}!");
 
 //Ask user to enter the name
 Console.WriteLine("Please enter your full name:");
-var FullName = Console.ReadLine();
+string FullName = Console.ReadLine();
 Console.WriteLine($"Hello, {FullName}");
 
 
