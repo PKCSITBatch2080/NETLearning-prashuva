@@ -1,3 +1,4 @@
+using System.Linq;
 class Methods
 {
    public void Greet()
@@ -15,4 +16,14 @@ class Methods
     var bmi = weightINKg / (heightInM* heightInM);
     return bmi;
     } 
+
+//  variable number of argument
+    public double GetMax( params double[] numbers) => numbers.Max();
+
+    public (int, int) GetMinMax(params int[] numbers){
+        var smallest = numbers.Min();
+        var largest = numbers.Max();
+        return (smallest, largest);
+        
+    }
 }
