@@ -14,13 +14,11 @@ class DataTypes
         float f = 0.20f;
 
         //Decimal floating
-        decimal d = 15.5m;
+        decimal dec = 15.5m;
 
         //Boolean
-        bool b = true;
+        bool boo = true;
 
-        //Character
-        char z = "P";
 
         //String: collection of characters
         string name = "John Doe";
@@ -29,10 +27,10 @@ class DataTypes
         var fruit = "Orange";
         var x = 10;
 
-        //Array
-        int[] roll = new int[];
-        roll[0] = 14;
-        string[] fruits = {"apple", "Banana", "Mango"};
+        // //Array
+        // int[] roll = new int[];
+        // roll[0] = 14;
+        // string[] fruits = {"apple", "Banana", "Mango"};
 
         //Object
         DateTime date = DateTime.Now;
@@ -43,6 +41,20 @@ class DataTypes
        num = c;
 
        //Explict conversion
-       float int_to_float= (float)c;       
+       float int_to_float= (float)c;   
+
+       //Collections
+       List<int> ageList =[4,6,5,7,9];
+       List<string> nameList = ["Devi", "Geet", "Prashuva"];   
+
+       //Dictionary
+       Dictionary<string, long> countryPopulation = new();
+       countryPopulation.Add ("Nepal", 2345698);
+       countryPopulation.Add ("India", 2836529805);
+       countryPopulation.Add ("US", 2635298);
+       countryPopulation.Add ("UK", 293829);
+
+       var p = countryPopulation["Nepal"];
+       Console.WriteLine(p);
     }
 }
