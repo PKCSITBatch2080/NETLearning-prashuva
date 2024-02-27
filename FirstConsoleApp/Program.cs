@@ -21,8 +21,8 @@ Student devi = new Student("Devi", 114);
 devi.RollNumber = 34; //Assigned
 devi.RollNumber = 134 ;// Not Assigned
 
+//Inheritance
 var priya = new CSStudent("priya", 22, "Hospital Management System");
-
 
 var prita = new CyberSecurityStudent("prita", 22, "Hospital Management System", "RedHat");
 prita.DisplayInfo();

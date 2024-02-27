@@ -26,4 +26,5 @@ class Methods
         return (smallest, largest);
         
     }
+
 }

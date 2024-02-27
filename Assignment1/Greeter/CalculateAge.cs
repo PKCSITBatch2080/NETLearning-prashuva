@@ -8,8 +8,7 @@ class CalculateAge
 
         TimeSpan age = today - DOB;
         int totalDays = Convert.ToInt32(age.TotalDays);
-        int totalHours = Convert.ToInt32(age.TotalHours);
-        int totalMinutes = Convert.ToInt32(age.TotalMinutes);
+    
 
         int years = totalDays / 365;
         int months = (totalDays % 365) / 30;

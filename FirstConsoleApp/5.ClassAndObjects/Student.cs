@@ -14,7 +14,7 @@ class Student
     string name;
     byte rollNumber;
     //Properties
-    public byte rollNumber{
+    public byte RollNumber{
         get
         {
             return rollNumber;
@@ -28,9 +28,16 @@ class Student
 
 
     }
-    string address;
+    //Auto implemented properties
+    public string Address{get; set;}
 
     DateTime dob;
+
+    public virtual void DisplayInfo(){
+        Console.WriteLine($"Student Name:{name}");
+        Console.WriteLine($"Student Rollnumber:{rollNumber}");
+        Console.WriteLine($"Student Address:{Address}");
+    }
 
 
 
