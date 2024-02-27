@@ -18,6 +18,12 @@ g.Display<int>(342);
 
 Student prashuva = new Student();
 Student devi = new Student("Devi", 114);
-devi.RollNumber = 34 //Assigned
-devi.RollNumber = 134 // Not Assigned
+devi.RollNumber = 34; //Assigned
+devi.RollNumber = 134 ;// Not Assigned
+
+var priya = new CSStudent("priya", 22, "Hospital Management System");
+
+
+var prita = new CyberSecurityStudent("prita", 22, "Hospital Management System", "RedHat");
+prita.DisplayInfo();
 
