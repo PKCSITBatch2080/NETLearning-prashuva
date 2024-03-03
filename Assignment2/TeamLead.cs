@@ -1,4 +1,4 @@
-//Multi-level inheritance
+
 public class TeamLead : Engineer
 {
     private static int teamLeadCount;
@@ -27,6 +27,10 @@ public class TeamLead : Engineer
     public override void Work()
     {
         Console.WriteLine("Team Lead is managing tasks and leading the team.");
+    }
+    public new void AttendMeeting()
+    {
+        Console.WriteLine("TeamLead is attending a meeting.");
     }
 }
 
