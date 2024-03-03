@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         // Creating an Engineer instance
-        Engineer prerana = new Engineer(1001, 2015, "Java");
+        Engineer prerana = new Engineer(101, 2022, "Java");
         Console.WriteLine($"Engineer ID: {prerana.EmployeeID}");
         Console.WriteLine($"Engineer Hire Year: {prerana.HireYear}");
         Console.WriteLine($"Engineer expertise Programming Language: {prerana.ProgrammingLanguage}");
@@ -16,7 +16,7 @@ class Program
         Console.WriteLine();
 
         // Creating a TeamLead instance
-        TeamLead teamLead = new TeamLead(2001, 2010, "cSharp");
+        TeamLead teamLead = new TeamLead(102, 2020, "cSharp");
         Console.WriteLine($"Team Lead ID: {teamLead.EmployeeID}");
         Console.WriteLine($"Team Lead Hire Year: {teamLead.HireYear}");
         Console.WriteLine($"Preferred Programming Language: {teamLead.ProgrammingLanguage}");
