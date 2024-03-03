@@ -12,7 +12,7 @@ class Program
         prerana.Work(); // method overrided from Employee
         prerana.SolveProblem(); // Engineer-specific method
         prerana.AttendMeeting(); // Method from interface
-        
+        prerana.ScheduleMeeting("At sharp 8PM IST");
 
         Console.WriteLine();
 
