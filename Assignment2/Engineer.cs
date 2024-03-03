@@ -25,6 +25,6 @@ public class Engineer : Employee, IMeetingAttendee
     }
      public void ScheduleMeeting(string meetingDetails)
     {
-        Console.WriteLine($"Team Lead is scheduling a meeting: {meetingDetails}");
+        Console.WriteLine($"Engineer is scheduling a meeting: {meetingDetails}");
     }
 }
