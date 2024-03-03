@@ -23,4 +23,8 @@ public class Engineer : Employee, IMeetingAttendee
     {
         Console.WriteLine("Engineer is attending a meeting.");
     }
+     public void ScheduleMeeting(string meetingDetails)
+    {
+        Console.WriteLine($"Team Lead is scheduling a meeting: {meetingDetails}");
+    }
 }
