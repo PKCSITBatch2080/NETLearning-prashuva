@@ -10,8 +10,14 @@ class Student
         name = n;
         RollNumber = rn;
     }
+
+    public Student(string n , byte rn, DateTime date){
+        name = n;
+        RollNumber = rn;
+        dob= date
+    }
     //Field
-    string name;
+    public string name;
     byte rollNumber;
     //Properties
     public byte RollNumber{
@@ -31,7 +37,7 @@ class Student
     //Auto implemented properties
     public string Address{get; set;}
 
-    DateTime dob;
+    public DateTime dob;
 
     public virtual void DisplayInfo(){
         Console.WriteLine($"Student Name:{name}");
