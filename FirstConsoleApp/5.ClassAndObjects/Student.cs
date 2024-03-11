@@ -14,7 +14,7 @@ class Student
     public Student(string n , byte rn, DateTime date){
         name = n;
         RollNumber = rn;
-        dob= date
+        dob= date;
     }
     //Field
     public string name;

@@ -27,3 +27,5 @@ var priya = new CSStudent("priya", 22, "Hospital Management System");
 var prita = new CyberSecurityStudent("prita", 22, "Hospital Management System", "RedHat");
 prita.DisplayInfo();
 
+
+FDHandling.CreateFile();
