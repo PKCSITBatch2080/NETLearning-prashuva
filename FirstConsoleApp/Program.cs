@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-Console.WriteLine("I am main method");
+/*Console.WriteLine("I am main method");
 DataTypes dt = new();
 dt.Learn();
 
@@ -29,3 +29,10 @@ prita.DisplayInfo();
 
 
 FDHandling.CreateFile();
+*/
+
+/*ParallelAndAsync pa = new();
+pa.ProcessNumbers();
+pa.ProcessNumbersParallel();
+*/
+Delegates.CalculateSum();
