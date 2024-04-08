@@ -1,0 +1,20 @@
+@model CollegeProgram
+<h2>New Tech Program Entry</h2>
+
+<form action="/Program/add" method="POST">
+  <div>
+    <label class="form-label">Name</label>
+      <input asp-for="Name" type="text" class="form-control">
+    </div>
+  <div>
+    <label class="form-label">Affiliation</label>
+      <input asp-for="Affiliation" type="text" class="form-control">
+  </div>
+  <div>
+    <label class="form-label">Established On</label>
+    <div >
+      <input asp-for="Started" type="date" class="form-control">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary mt-2">Sign in</button>
+</form>
