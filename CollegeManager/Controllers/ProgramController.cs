@@ -22,6 +22,7 @@ public class ProgramController : Controller
         var models = db.CollegePrograms.ToList();
         return View(models);
     }
+    [HttpGet]
     public IActionResult Add()
     {
         return View();
@@ -33,6 +34,41 @@ public class ProgramController : Controller
     {
         CollegeManagerDb db = new();
         var models = db.CollegePrograms.Add(program);
+        db.SaveChanges();
+        return RedirectToAction("Index");
+    }
+    [HttpGet]
+    public IActionResult Edit(int id)
+    {
+         CollegeManagerDb db = new();
+        var models = db.CollegePrograms.Find(id);
+        return View(models);
+    }
+
+    [HttpPost]
+
+    public IActionResult Edit(CollegeProgram program) //model binding
+    {
+        CollegeManagerDb db = new();
+        var models = db.CollegePrograms.Update(program);
+        db.SaveChanges();
+        return RedirectToAction("Index");
+    }
+
+    [HttpGet]
+    public IActionResult Delete(int id)
+    {
+         CollegeManagerDb db = new();
+        var models = db.CollegePrograms.Find(id);
+        return View(models);
+    }
+
+    [HttpPost]
+
+    public IActionResult Delete(CollegeProgram program) //model binding
+    {
+        CollegeManagerDb db = new();
+        var models = db.CollegePrograms.Remove(program);
         db.SaveChanges();
         return RedirectToAction("Index");
     }

@@ -1,5 +1,5 @@
 @model List<CollegeProgram>
-<a class="btn btn-primary" href="/Program/add">
+<a class="btn btn-primary" href="/program/add">
 <i class="bi bi-plus-lg"></i>
 New Tech Program</a>
 <table class="table">
@@ -9,15 +9,22 @@ New Tech Program</a>
       <th scope="col">Name</th>
       <th scope="col">Affiliation</th>
       <th scope="col">Started</th>
+      <th scope="col">Action</th>
+      
     </tr>
   </thead>
   <tbody>
+    @{int i =1;}
     @foreach(var college in Model){
     <tr>
-      <th scope="row">@college.Id</th>
+      <th scope="row">@(i++)</th>
       <td>@college.Name</td>
       <td>@college.Affiliation</td>
       <td>@college.Started</td>
+      <td>
+        <a href="/program/edit?id=@college.Id"><i class="bi bi-pen text-warning"></i></a>
+        <a asp-controller="Program" asp-action="Delete" asp-route-id="@college.Id"><i class="bi bi-trash text-danger"></i></a>
+      </td>
     </tr>
     }
   </tbody>

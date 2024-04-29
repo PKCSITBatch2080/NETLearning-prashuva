@@ -35,6 +35,46 @@ namespace CollegeManager.Migrations
 
                     b.ToTable("CollegePrograms");
                 });
+
+            modelBuilder.Entity("Student", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("CollegeProgramId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("Dob")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CollegeProgramId");
+
+                    b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("Student", b =>
+                {
+                    b.HasOne("CollegeProgram", "CollegeProgram")
+                        .WithMany()
+                        .HasForeignKey("CollegeProgramId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CollegeProgram");
+                });
 #pragma warning restore 612, 618
         }
     }
