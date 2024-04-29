@@ -1,0 +1,10 @@
+@model Student
+<h2 class="text-danger">Do you really want to delete @Model.Name program entry?</h2>
+
+<form action="/students/delete" method="post">
+<input type="hidden" asp-for="Id"/>
+  <div>
+  <button type="submit" class="btn btn-danger mt-2">Delete</button>
+  <a href="/students" type="submit" class="btn btn-primary mt-2">Cancel</a>
+  </div>
+</form>

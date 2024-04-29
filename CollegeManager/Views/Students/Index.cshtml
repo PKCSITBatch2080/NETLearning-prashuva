@@ -1,0 +1,35 @@
+@model List<Student>
+<a class="btn btn-primary" href="/students/create">
+<i class="bi bi-plus-lg"></i>
+Create New</a>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Address</th>
+      <th scope="col">Email</th>
+      <th scope="col">Dob</th>
+      <th scope="col">CollegeProgram</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    @{int i =1;}
+    @foreach(var student in Model){
+    <tr>
+      <th scope="row">@(i++)</th>
+      <td>@student.Name</td>
+      <td>@student.Address</td>
+      <td>@student.Email</td>
+      <td>@student.Dob</td>
+      <td>@student.CollegeProgram.Name</td>
+      <td>
+        <a asp-controller="Students" asp-action="Edit" asp-route-id="@student.Id"><i class="bi bi-pen text-warning"></i></a>
+        <a asp-controller="Students" asp-action="Delete" asp-route-id="@student.Id"><i class="bi bi-trash text-danger"></i></a>
+      </td>
+      
+    </tr>
+    }
+  </tbody>
+</table>
